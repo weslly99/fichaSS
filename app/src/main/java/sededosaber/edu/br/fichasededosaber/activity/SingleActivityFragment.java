@@ -1,9 +1,11 @@
-package sededosaber.edu.br.fichasededosaber;
+package sededosaber.edu.br.fichasededosaber.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+
+import sededosaber.edu.br.fichasededosaber.R;
 
 /**
  * Created by weslly on 18/01/16.

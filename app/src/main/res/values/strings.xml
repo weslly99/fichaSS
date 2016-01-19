@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Ficha Sede do Saber</string>
     <string name="action_settings">Settings</string>
+    <string name="shift_morning">Manhã</string>
+    <string name="shift_afternoon">Tarde</string>
+    <string name="shift">Turno:</string>
+    <string name="classroom">Turma:</string>
 </resources>
