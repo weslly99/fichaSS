@@ -2,11 +2,11 @@ package sededosaber.edu.br.fichasededosaber;
 
 import android.support.v4.app.Fragment;
 
-public class FichaActivity extends SingleActivityFragment {
+public class RecordActivity extends SingleActivityFragment {
 
 
     @Override
     public Fragment createFragment() {
-        return AlunoListFragment.newInstance();
+        return RecordListFragment.newInstance();
     }
 }

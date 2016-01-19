@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 /**
  * Created by weslly on 18/01/16.
  */
-public class AlunoListFragment extends Fragment{
+public class RecordListFragment extends Fragment{
 
     private RecyclerView mRecyclerView;
 
@@ -19,15 +19,15 @@ public class AlunoListFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_aluno_list,container,false);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.aluno_recycler_view);
+        View view = inflater.inflate(R.layout.fragment_record_list,container,false);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.studant_recycler_view);
 
         return view;
     }
 
 
-    public static AlunoListFragment newInstance() {
-        AlunoListFragment fragment = new AlunoListFragment();
+    public static RecordListFragment newInstance() {
+        RecordListFragment fragment = new RecordListFragment();
         return fragment;
     }
 }
