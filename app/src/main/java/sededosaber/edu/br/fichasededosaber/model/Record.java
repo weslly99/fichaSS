@@ -1,5 +1,6 @@
 package sededosaber.edu.br.fichasededosaber.model;
 
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -12,6 +13,10 @@ public class Record {
     private String mBookcase;
     private BirthCertificate mCertificate;
     private Address mAddress;
+    private List<Contact> mContacts;
+    private String mClassRoom;
+    private Shift mShift;
+
 
     public Record() {
         this(UUID.randomUUID());
@@ -55,5 +60,28 @@ public class Record {
 
     public void setAddress(Address address) {
         mAddress = address;
+    }
+    public List<Contact> getContacts() {
+        return mContacts;
+    }
+
+    public void setContacts(List<Contact> contacts) {
+        mContacts = contacts;
+    }
+
+    public String getClassRoom() {
+        return mClassRoom;
+    }
+
+    public void setClassRoom(String classRoom) {
+        mClassRoom = classRoom;
+    }
+
+    public Shift getShift() {
+        return mShift;
+    }
+
+    public void setShift(Shift shift) {
+        mShift = shift;
     }
 }
