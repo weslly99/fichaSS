@@ -4,6 +4,7 @@ import android.content.Context;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by weslly on 19/01/16.
@@ -42,5 +43,14 @@ public class LabRecord {
 
     public List<Record> getRecords() {
         return mRecords;
+    }
+
+    public Record getRecord(UUID id){
+        for(int i = 0; i<mRecords.size();i++){
+            if(mRecords.get(i).getId().equals(id)){
+                return mRecords.get(i);
+            }
+        }
+        return null;
     }
 }

@@ -33,7 +33,6 @@ public class RecordListFragment extends Fragment{
         mRecyclerView = (RecyclerView) view.findViewById(R.id.studant_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-
         List<Record> records = LabRecord.getLabRecord(getActivity()).getRecords();
         mRecyclerView.setAdapter(new RecordAdapter(records));
 
@@ -51,7 +50,7 @@ public class RecordListFragment extends Fragment{
 
     private class RecordHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener{
-
+        private Record mRecord;
         private TextView mNameTV;
         private TextView mClassRoomTV;
         private TextView mShiftTV;
@@ -65,7 +64,8 @@ public class RecordListFragment extends Fragment{
 
         }
 
-        public void bindHolder(sededosaber.edu.br.fichasededosaber.model.Record record){
+        public void bindHolder(Record record){
+            mRecord = record;
             mNameTV.setText(record.getCertificate().getName());
             mClassRoomTV.setText(record.getClassRoom());
             String shift = getString(record.getShift().getText());
@@ -74,7 +74,7 @@ public class RecordListFragment extends Fragment{
 
         @Override
         public void onClick(View v) {
-            Intent intent = RecordActivity.newIntent(getActivity());
+            Intent intent = RecordActivity.newIntent(getActivity(),mRecord.getId());
             startActivity(intent);
         }
     }
