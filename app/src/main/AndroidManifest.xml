@@ -19,7 +19,6 @@
         <activity android:name=".activity.RecordActivity"
                   android:parentActivityName=".activity.RecordListActivity"/>
 
-            
     </application>
 
 </manifest>
