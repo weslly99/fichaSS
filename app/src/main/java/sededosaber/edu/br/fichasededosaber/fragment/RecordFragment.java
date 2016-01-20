@@ -33,7 +33,7 @@ public class RecordFragment extends Fragment {
         mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
 
         View view = inflater.inflate(R.layout.fragment_record,container,false);
-        mNameET = (EditText) view.findViewById(R.id.record_name);
+        mNameET = (EditText) view.findViewById(R.id.record_name_edit_text);
         mNameET.setText(mRecord.getCertificate().getName());
 
         return view;

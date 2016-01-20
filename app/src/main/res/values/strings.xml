@@ -6,4 +6,13 @@
     <string name="shift">Turno:</string>
     <string name="classroom">Turma:</string>
     <string name="name">Nome</string>
+    <string name="birth_certificate">Certidão de Nascimento</string>
+    <string name="name_father">Nome do Pai</string>
+    <string name="name_mother">Nome da Mãe</string>
+    <string name="bith_day">Data de nascimento</string>
+    <string name="city">Cidade</string>
+    <string name="state">Estado</string>
+    <string name="notary_office">Cartorio</string>
+    <string name="book">Livro</string>
+    <string name="number">Numero</string>
 </resources>
