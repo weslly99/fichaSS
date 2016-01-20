@@ -1,4 +1,4 @@
-package sededosaber.edu.br.fichasededosaber.activity;
+package br.edu.sededosaber.fichasededosaber.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,10 +12,10 @@ import android.support.v7.app.AppCompatActivity;
 import java.util.List;
 import java.util.UUID;
 
-import sededosaber.edu.br.fichasededosaber.R;
-import sededosaber.edu.br.fichasededosaber.fragment.RecordFragment;
-import sededosaber.edu.br.fichasededosaber.model.LabRecord;
-import sededosaber.edu.br.fichasededosaber.model.Record;
+import br.edu.sededosaber.fichasededosaber.R;
+import br.edu.sededosaber.fichasededosaber.fragment.RecordFragment;
+import br.edu.sededosaber.fichasededosaber.model.LabRecord;
+import br.edu.sededosaber.fichasededosaber.model.Record;
 
 public class RecordActivity extends AppCompatActivity {
     private static final String EXTRA_ID_RECORD =

@@ -1,4 +1,4 @@
-package sededosaber.edu.br.fichasededosaber;
+package br.edu.sededosaber.fichasededosaber;
 
 import org.junit.Test;
 

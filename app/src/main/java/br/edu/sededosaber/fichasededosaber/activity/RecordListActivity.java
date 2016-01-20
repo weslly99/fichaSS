@@ -1,8 +1,8 @@
-package sededosaber.edu.br.fichasededosaber.activity;
+package br.edu.sededosaber.fichasededosaber.activity;
 
 import android.support.v4.app.Fragment;
 
-import sededosaber.edu.br.fichasededosaber.fragment.RecordListFragment;
+import br.edu.sededosaber.fichasededosaber.fragment.RecordListFragment;
 
 /**
  * Created by weslly on 19/01/16.

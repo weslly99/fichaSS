@@ -1,4 +1,4 @@
-package sededosaber.edu.br.fichasededosaber.model;
+package br.edu.sededosaber.fichasededosaber.model;
 
 import android.content.Context;
 

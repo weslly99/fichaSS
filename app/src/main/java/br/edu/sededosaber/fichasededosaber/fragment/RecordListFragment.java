@@ -1,4 +1,4 @@
-package sededosaber.edu.br.fichasededosaber.fragment;
+package br.edu.sededosaber.fichasededosaber.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,10 +13,10 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import sededosaber.edu.br.fichasededosaber.R;
-import sededosaber.edu.br.fichasededosaber.activity.RecordActivity;
-import sededosaber.edu.br.fichasededosaber.model.LabRecord;
-import sededosaber.edu.br.fichasededosaber.model.Record;
+import br.edu.sededosaber.fichasededosaber.R;
+import br.edu.sededosaber.fichasededosaber.activity.RecordActivity;
+import br.edu.sededosaber.fichasededosaber.model.LabRecord;
+import br.edu.sededosaber.fichasededosaber.model.Record;
 
 /**
  * Created by weslly on 18/01/16.

@@ -1,4 +1,4 @@
-package sededosaber.edu.br.fichasededosaber.fragment;
+package br.edu.sededosaber.fichasededosaber.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,9 +10,9 @@ import android.widget.EditText;
 
 import java.util.UUID;
 
-import sededosaber.edu.br.fichasededosaber.R;
-import sededosaber.edu.br.fichasededosaber.model.LabRecord;
-import sededosaber.edu.br.fichasededosaber.model.Record;
+import br.edu.sededosaber.fichasededosaber.R;
+import br.edu.sededosaber.fichasededosaber.model.LabRecord;
+import br.edu.sededosaber.fichasededosaber.model.Record;
 
 /**
  * Created by weslly on 20/01/16.

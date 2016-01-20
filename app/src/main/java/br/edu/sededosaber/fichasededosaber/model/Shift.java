@@ -1,6 +1,6 @@
-package sededosaber.edu.br.fichasededosaber.model;
+package br.edu.sededosaber.fichasededosaber.model;
 
-import sededosaber.edu.br.fichasededosaber.R;
+import br.edu.sededosaber.fichasededosaber.R;
 
 /**
  * Created by weslly on 19/01/16.

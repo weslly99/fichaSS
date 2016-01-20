@@ -26,7 +26,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6acf93fa-2043-4033-b5c6-7011ab2812f2" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/androidTest/java/sededosaber/edu/br/fichasededosaber/ApplicationTest.java" afterPath="$PROJECT_DIR$/app/src/androidTest/java/br/edu/sededosaber/fichasededosaber/ApplicationTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordListActivity.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/SingleActivityFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/SingleActivityFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordListFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordListFragment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Address.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Address.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/BirthCertificate.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/BirthCertificate.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Contact.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Contact.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/LabRecord.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/LabRecord.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Record.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Record.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Shift.java" afterPath="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Shift.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/test/java/sededosaber/edu/br/fichasededosaber/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/app/src/test/java/sededosaber/edu/br/fichasededosaber/ExampleUnitTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fichaSedeDoSaber.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,26 +62,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="fragment_record.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fragment_record.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54642856">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-              <folding>
-                <element signature="e#653#680#0" expanded="true" />
-                <element signature="e#1149#1163#0" expanded="true" />
-                <element signature="e#1696#1717#0" expanded="true" />
-                <element signature="e#2250#2271#0" expanded="true" />
-                <element signature="e#2614#2632#0" expanded="true" />
-                <element signature="e#3101#3115#0" expanded="true" />
-                <element signature="e#3642#3657#0" expanded="true" />
-                <element signature="e#4192#4215#0" expanded="true" />
-                <element signature="e#4990#5004#0" expanded="true" />
-                <element signature="e#5618#5634#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-16.838709">
+              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -81,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecordFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordFragment.java">
+      <file leaf-file-name="RecordFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.7309645">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,7 +98,7 @@
         </entry>
       </file>
       <file leaf-file-name="BirthCertificate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/BirthCertificate.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/BirthCertificate.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
@@ -109,7 +113,7 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.931034">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
               <folding />
             </state>
@@ -1709,9 +1713,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordListFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/sededosaber/edu/sededosaber/fichasededosaber/fragment/RecordFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordFragment.java" />
       </list>
     </option>
   </component>
@@ -1755,6 +1761,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1905,8 +1913,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -2127,7 +2133,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2138,27 +2144,27 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7004831" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22709164" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22709164" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24940239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2179,7 +2185,55 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/BirthCertificate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+          <folding>
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#524#525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
@@ -2191,7 +2245,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordListActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
@@ -2203,7 +2257,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordListFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="20" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
@@ -2215,12 +2269,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/LabRecord.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/LabRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getLabRecord#0;class#LabRecord#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2247,7 +2302,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Record.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Record.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
@@ -2259,7 +2314,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="64" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
@@ -2271,7 +2326,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordListActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
@@ -2283,7 +2338,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordListFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -2295,12 +2350,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/LabRecord.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/LabRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getLabRecord#0;class#LabRecord#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2327,7 +2383,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Record.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Record.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
@@ -2339,7 +2395,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
@@ -2351,7 +2407,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordListFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
@@ -2363,7 +2419,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Record.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Record.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -2386,7 +2442,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/SingleActivityFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/SingleActivityFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
@@ -2404,14 +2460,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Address.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Address.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5177665">
           <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Record.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Record.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="30" />
@@ -2439,14 +2495,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Shift.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Shift.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5482234">
           <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding>
-            <element signature="e#325#326#0" expanded="false" />
-            <element signature="e#352#353#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2480,7 +2533,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/Contact.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42639595">
           <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
@@ -2502,7 +2555,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordListActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordListActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42639595">
           <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
@@ -2514,7 +2567,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/SingleActivityFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/SingleActivityFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39593908">
           <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
@@ -2522,7 +2575,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/LabRecord.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/LabRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
@@ -2533,7 +2586,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/activity/RecordActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="13" selection-start-line="53" selection-start-column="13" selection-end-line="53" selection-end-column="13" />
@@ -2545,7 +2598,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordListFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordListFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.213198">
           <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
@@ -2557,7 +2610,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/model/BirthCertificate.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/model/BirthCertificate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
@@ -2570,7 +2623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.931034">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding />
         </state>
@@ -2584,34 +2637,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/sededosaber/edu/br/fichasededosaber/fragment/RecordFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_record.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54642856">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        <state vertical-scroll-proportion="-16.838709">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/RecordFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7309645">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="e#653#680#0" expanded="true" />
-            <element signature="e#1149#1163#0" expanded="true" />
-            <element signature="e#1696#1717#0" expanded="true" />
-            <element signature="e#2250#2271#0" expanded="true" />
-            <element signature="e#2614#2632#0" expanded="true" />
-            <element signature="e#3101#3115#0" expanded="true" />
-            <element signature="e#3642#3657#0" expanded="true" />
-            <element signature="e#4192#4215#0" expanded="true" />
-            <element signature="e#4990#5004#0" expanded="true" />
-            <element signature="e#5618#5634#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
