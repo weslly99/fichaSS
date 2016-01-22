@@ -3,9 +3,12 @@ package br.edu.sededosaber.fichasededosaber.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.UUID;
@@ -22,6 +25,12 @@ public class RecordFragment extends Fragment {
     private static final String ARG_ID_RECORD = "id_record";
 
     private EditText mNameET;
+    private EditText mNameFatherET;
+    private EditText mNameMotherET;
+    private EditText mCityET;
+    private EditText mStateET;
+    private EditText mNotaryOfficeET;
+    private Button mDateButton;
 
     private Record mRecord;
 
@@ -35,6 +44,101 @@ public class RecordFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_record,container,false);
         mNameET = (EditText) view.findViewById(R.id.record_name_edit_text);
         mNameET.setText(mRecord.getCertificate().getName());
+        mNameET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setName(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mNameFatherET =(EditText) view.findViewById(R.id.record_name_father_edit_text);
+        mNameFatherET.setText(mRecord.getCertificate().getNameFather());
+        mNameFatherET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setNameFather(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mNameMotherET =(EditText) view.findViewById(R.id.record_name_mother_edit_text);
+        mNameMotherET.setText(mRecord.getCertificate().getNameMother());
+        mNameMotherET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setNameMother(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mCityET = (EditText) view.findViewById(R.id.record_city_edit_text);
+        mCityET.setText(mRecord.getCertificate().getCity());
+        mCityET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setCity(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mStateET = (EditText) view.findViewById(R.id.record_state_edit_text);
+        mStateET.setText(mRecord.getCertificate().getState());
+        mStateET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setState(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        
+
 
         return view;
     }
