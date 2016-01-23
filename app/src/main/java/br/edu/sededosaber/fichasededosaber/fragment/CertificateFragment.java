@@ -21,7 +21,7 @@ import br.edu.sededosaber.fichasededosaber.model.Record;
 /**
  * Created by weslly on 20/01/16.
  */
-public class RecordFragment extends Fragment {
+public class CertificateFragment extends Fragment {
 
     private static final String ARG_ID_RECORD = "id_record";
 
@@ -44,7 +44,7 @@ public class RecordFragment extends Fragment {
         UUID id = (UUID) getArguments().getSerializable(ARG_ID_RECORD);
         mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
 
-        View view = inflater.inflate(R.layout.fragment_record,container,false);
+        View view = inflater.inflate(R.layout.fragment_certificate,container,false);
         mNameET = (EditText) view.findViewById(R.id.record_name_edit_text);
         mNameET.setText(mRecord.getCertificate().getName());
         mNameET.addTextChangedListener(new TextWatcher() {
@@ -203,11 +203,11 @@ public class RecordFragment extends Fragment {
         return view;
     }
 
-    public static RecordFragment newInstance(Record record) {
+    public static CertificateFragment newInstance(Record record) {
         Bundle bundle = new Bundle();
         bundle.putSerializable(ARG_ID_RECORD,record.getId());
 
-        RecordFragment fragment = new RecordFragment();
+        CertificateFragment fragment = new CertificateFragment();
         fragment.setArguments(bundle);
 
         return fragment;

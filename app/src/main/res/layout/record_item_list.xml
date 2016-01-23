@@ -33,7 +33,7 @@
                 android:layout_row="0"
                 android:layout_marginRight="4dp"
                 android:layout_marginLeft="16dp"
-                android:text="@string/classroom"
+                android:text="@string/label_classroom"
                 />
             <TextView
                 android:id="@+id/record_item_classroom"
@@ -55,7 +55,7 @@
                 android:layout_column="0"
                 android:layout_marginRight="4dp"
                 android:layout_marginLeft="16dp"
-                android:text="@string/shift"/>
+                android:text="@string/label_shift"/>
             <TextView
                 android:id="@+id/record_item_shift"
                 android:layout_width="wrap_content"
