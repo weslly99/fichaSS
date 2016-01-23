@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.Date;
 import java.util.UUID;
 
 import br.edu.sededosaber.fichasededosaber.R;
@@ -30,6 +31,8 @@ public class RecordFragment extends Fragment {
     private EditText mCityET;
     private EditText mStateET;
     private EditText mNotaryOfficeET;
+    private EditText mNumber;
+    private EditText mBook;
     private Button mDateButton;
 
     private Record mRecord;
@@ -137,8 +140,65 @@ public class RecordFragment extends Fragment {
             }
         });
 
-        
+        mNotaryOfficeET = (EditText) view.findViewById(R.id.record_notary_office_edit_text);
+        mNotaryOfficeET.setText(mRecord.getCertificate().getNotaryOffice());
+        mNotaryOfficeET.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setNotaryOffice(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mBook = (EditText) view.findViewById(R.id.record_book_edit_text);
+        mBook.setText(mRecord.getCertificate().getBook());
+        mBook.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setBook(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mNumber = (EditText) view.findViewById(R.id.record_number_edit_text);
+        mNumber.setText(mRecord.getCertificate().getNumber());
+        mNumber.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                mRecord.getCertificate().setNumber(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+        mDateButton = (Button) view.findViewById(R.id.record_bith_day_button);
+        configDate();
 
         return view;
     }
@@ -153,4 +213,10 @@ public class RecordFragment extends Fragment {
         return fragment;
     }
 
+    private void configDate(){
+        Date date = mRecord.getCertificate().getBirthDay();
+        if(date != null){
+            mDateButton.setText(date.toString());
+        }
+    }
 }
