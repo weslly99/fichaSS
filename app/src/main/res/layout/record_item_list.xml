@@ -13,6 +13,7 @@
         android:textSize="16dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"
+        android:textColor="@color/primaryText"
         tools:text="Weslly Lindemberg Costa de Oliveira Silva"
         />
     <LinearLayout

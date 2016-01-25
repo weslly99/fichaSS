@@ -3,6 +3,8 @@ package br.edu.sededosaber.fichasededosaber.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,6 +26,7 @@ import br.edu.sededosaber.fichasededosaber.model.Record;
 public class RecordListFragment extends Fragment{
 
     private RecyclerView mRecyclerView;
+    private FloatingActionButton mFab;
 
     @Nullable
     @Override
@@ -36,7 +39,13 @@ public class RecordListFragment extends Fragment{
         List<Record> records = LabRecord.getLabRecord(getActivity()).getRecords();
         mRecyclerView.setAdapter(new RecordAdapter(records));
 
-
+        mFab = (FloatingActionButton) view.findViewById(R.id.fab);
+        mFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "teste", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            }
+        });
         return view;
     }
 

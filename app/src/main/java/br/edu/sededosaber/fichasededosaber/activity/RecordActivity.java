@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +30,7 @@ public class RecordActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private TabLayout mTabLayout;
     private Record mRecord;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,10 @@ public class RecordActivity extends AppCompatActivity {
 
         UUID idRecord = (UUID) getIntent().getSerializableExtra(EXTRA_ID_RECORD);
         setupRecord(idRecord);
+
+        mToolbar = (Toolbar) findViewById(R.id.record_tab_tool_bar);
+
+        setSupportActionBar(mToolbar);
 
         mViewPager = (ViewPager) findViewById(R.id.record_tab_view_pager);
         setupViewPageAdapter(mViewPager);
@@ -60,12 +66,11 @@ public class RecordActivity extends AppCompatActivity {
         int colorNormal = 0;
         int colorSelected = 0;
         if (Build.VERSION.SDK_INT >= 23) {
-
-            colorNormal = getColor(R.color.textColorPrimary);
-            colorSelected = getColor(R.color.navigationBarColor);
+            colorNormal = getColor(R.color.primaryText);
+            colorSelected =  getColor(R.color.textIcon);
         } else {
-            colorNormal = getResources().getColor(R.color.textColorPrimary);
-            colorSelected = getResources().getColor(R.color.navigationBarColor);
+            colorNormal = getResources().getColor(R.color.primaryText);
+            colorSelected =  getResources().getColor(R.color.textIcon);
         }
         mTabLayout.setTabTextColors(colorNormal, colorSelected);
     }
@@ -88,7 +93,6 @@ public class RecordActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_ID_RECORD, id);
         return intent;
     }
-
 
     private class ViewPagerAdapter extends FragmentPagerAdapter {
 

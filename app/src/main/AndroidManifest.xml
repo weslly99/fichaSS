@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name="br.edu.sededosaber.fichasededosaber.activity.RecordActivity"
-                  android:parentActivityName="br.edu.sededosaber.fichasededosaber.activity.RecordListActivity"/>
+                android:parentActivityName=".activity.RecordListActivity"
+                 />
 
     </application>
 
