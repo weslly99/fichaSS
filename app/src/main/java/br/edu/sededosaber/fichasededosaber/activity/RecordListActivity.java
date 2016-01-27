@@ -9,6 +9,7 @@ import br.edu.sededosaber.fichasededosaber.fragment.RecordListFragment;
  */
 public class RecordListActivity extends SingleActivityFragment {
 
+
     @Override
     public Fragment createFragment() {
         return RecordListFragment.newInstance();

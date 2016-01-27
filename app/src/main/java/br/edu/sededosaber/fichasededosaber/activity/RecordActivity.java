@@ -41,8 +41,10 @@ public class RecordActivity extends AppCompatActivity {
         setupRecord(idRecord);
 
         mToolbar = (Toolbar) findViewById(R.id.record_tab_tool_bar);
-
         setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        
+
 
         mViewPager = (ViewPager) findViewById(R.id.record_tab_view_pager);
         setupViewPageAdapter(mViewPager);

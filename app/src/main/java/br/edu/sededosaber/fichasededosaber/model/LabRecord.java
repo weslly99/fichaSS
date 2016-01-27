@@ -28,6 +28,17 @@ public class LabRecord {
             birth.setBirthDay(new Date());
             birth.setCity("Juazeiro do Norte");
 
+            Contact contact = new Contact();
+            contact.setCity("juazeiro do norte");
+            contact.setState("Ce");
+            contact.setNumber("235");
+            contact.setNeighborhood("Triangulo");
+            contact.setPhone("88999-9999");
+            contact.setStreet("maria Aurora");
+
+
+
+            record.setContacts(contact);
             record.setCertificate(birth);
             mRecords.add(record);
 

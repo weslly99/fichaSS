@@ -17,5 +17,9 @@
     <string name="notary_office">Cartorio</string>
     <string name="book">Livro</string>
     <string name="number">Numero</string>
+    <string name="phone">Telefone</string>
+    <string name="neighborhood">Bairro</string>
+    <string name="street">Rua</string>
+
 
 </resources>

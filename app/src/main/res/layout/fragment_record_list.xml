@@ -11,10 +11,16 @@
         android:id="@+id/record_list_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
         android:gravity="top"
         />
-    <include layout="@layout/record_recycler_view"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/studant_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        ></android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

@@ -1,6 +1,5 @@
 package br.edu.sededosaber.fichasededosaber.model;
 
-import java.util.List;
 import java.util.UUID;
 
 /**
@@ -12,8 +11,7 @@ public class Record {
     private String mShelf;
     private String mBookcase;
     private BirthCertificate mCertificate;
-    private Address mAddress;
-    private List<Contact> mContacts;
+    private Contact mContacts;
     private String mClassRoom;
     private Shift mShift;
 
@@ -54,18 +52,11 @@ public class Record {
         mCertificate = certificate;
     }
 
-    public Address getAddress() {
-        return mAddress;
-    }
-
-    public void setAddress(Address address) {
-        mAddress = address;
-    }
-    public List<Contact> getContacts() {
+    public Contact getContacts() {
         return mContacts;
     }
 
-    public void setContacts(List<Contact> contacts) {
+    public void setContacts(Contact contacts) {
         mContacts = contacts;
     }
 
