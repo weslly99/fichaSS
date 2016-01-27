@@ -33,7 +33,7 @@ public class RecordListFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_record_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_record_recyclerview, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.studant_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -96,7 +96,7 @@ public class RecordListFragment extends Fragment{
         @Override
         public RecordHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(getActivity());
-            View view = inflater.inflate(R.layout.record_item_list,parent,false);
+            View view = inflater.inflate(R.layout.record_item_recyclerview,parent,false);
 
             return new RecordHolder(view);
         }

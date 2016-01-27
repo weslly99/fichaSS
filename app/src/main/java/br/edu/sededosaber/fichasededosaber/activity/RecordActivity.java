@@ -11,6 +11,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +27,9 @@ import br.edu.sededosaber.fichasededosaber.fragment.ContactFragment;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
 
-public class RecordActivity extends AppCompatActivity {
+public class RecordActivity extends AppCompatActivity{
+
+    private static final String TAG = "RecordActivity";
     private static final String EXTRA_ID_RECORD =
             "br.edu.sededosaber.fichasededosaber.extra_id_record";
 
@@ -35,7 +41,7 @@ public class RecordActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_record);
+        setContentView(R.layout.activity_record_tabs);
 
         UUID idRecord = (UUID) getIntent().getSerializableExtra(EXTRA_ID_RECORD);
         setupRecord(idRecord);
@@ -43,7 +49,6 @@ public class RecordActivity extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.record_tab_tool_bar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        
 
 
         mViewPager = (ViewPager) findViewById(R.id.record_tab_view_pager);
@@ -64,15 +69,15 @@ public class RecordActivity extends AppCompatActivity {
         }
     }
 
-    private void configTextColor(){
+    private void configTextColor() {
         int colorNormal = 0;
         int colorSelected = 0;
         if (Build.VERSION.SDK_INT >= 23) {
             colorNormal = getColor(R.color.primaryText);
-            colorSelected =  getColor(R.color.textIcon);
+            colorSelected = getColor(R.color.textIcon);
         } else {
             colorNormal = getResources().getColor(R.color.primaryText);
-            colorSelected =  getResources().getColor(R.color.textIcon);
+            colorSelected = getResources().getColor(R.color.textIcon);
         }
         mTabLayout.setTabTextColors(colorNormal, colorSelected);
     }
@@ -84,7 +89,7 @@ public class RecordActivity extends AppCompatActivity {
         title = getString(R.string.contact);
         viewPagerAdapter.addFragment(ContactFragment.newInstance(mRecord), title);
         title = getString(R.string.classroom);
-        viewPagerAdapter.addFragment(ClassroomFragment.newInstance(mRecord),title);
+        viewPagerAdapter.addFragment(ClassroomFragment.newInstance(mRecord), title);
 
         viewpager.setAdapter(viewPagerAdapter);
     }
@@ -123,6 +128,28 @@ public class RecordActivity extends AppCompatActivity {
         @Override
         public CharSequence getPageTitle(int position) {
             return mTitles.get(position);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_record, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_item_delete: //user select delete menu
+                Log.i(TAG, "menu delete selected");
+                return true;
+            case R.id.menu_item_archive: //user select archive menu
+                Log.i(TAG, "menu archive selected");
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
