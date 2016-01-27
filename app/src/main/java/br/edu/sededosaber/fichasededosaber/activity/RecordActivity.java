@@ -142,7 +142,8 @@ public class RecordActivity extends AppCompatActivity{
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_item_delete: //user select delete menu
-                Log.i(TAG, "menu delete selected");
+                LabRecord.getLabRecord(this).deleteRecord(mRecord.getId());
+                finish();
                 return true;
             case R.id.menu_item_archive: //user select archive menu
                 Log.i(TAG, "menu archive selected");
