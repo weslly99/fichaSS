@@ -8,8 +8,6 @@ import java.util.UUID;
 public class Record {
 
     private UUID mId;
-    private String mShelf;
-    private String mBookcase;
     private BirthCertificate mCertificate;
     private Contact mContacts;
     private String mClassRoom;
@@ -26,22 +24,6 @@ public class Record {
 
     public UUID getId() {
         return mId;
-    }
-
-    public String getShelf() {
-        return mShelf;
-    }
-
-    public void setShelf(String shelf) {
-        mShelf = shelf;
-    }
-
-    public String getBookcase() {
-        return mBookcase;
-    }
-
-    public void setBookcase(String bookcase) {
-        mBookcase = bookcase;
     }
 
     public BirthCertificate getCertificate() {

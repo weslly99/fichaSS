@@ -80,4 +80,5 @@ public class LabRecord {
     public void addRecord(Record record){
         mRecords.add(record);
     }
+
 }

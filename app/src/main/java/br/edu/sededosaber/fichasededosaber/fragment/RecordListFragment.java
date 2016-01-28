@@ -3,7 +3,6 @@ package br.edu.sededosaber.fichasededosaber.fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.github.clans.fab.FloatingActionButton;
 
 import java.util.List;
 
@@ -27,7 +28,8 @@ public class RecordListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecordAdapter mRecordAdapter;
-    private FloatingActionButton mFab;
+    private FloatingActionButton mFabAddRecord;
+    private FloatingActionButton mFabAddClassRoom;
     private Toolbar mToolbar;
 
     @Nullable
@@ -37,11 +39,23 @@ public class RecordListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_record_recyclerview, container, false);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.studant_recycler_view);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        updateUI();
 
         mToolbar = (Toolbar) view.findViewById(R.id.record_list_toolbar);
 
-        mFab = (FloatingActionButton) view.findViewById(R.id.fab);
+        mFabAddRecord = (FloatingActionButton)view.findViewById(R.id.fab_add_record);
+        mFabAddRecord.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Record record = new Record();
+                record.set
+            }
+        });
+
+        mFabAddClassRoom =(FloatingActionButton) view.findViewById(R.id.fab_add_classroom);
+
+
+
+        updateUI();
 
         return view;
     }
@@ -65,11 +79,11 @@ public class RecordListFragment extends Fragment {
         updateUI();
     }
 
+
     public static RecordListFragment newInstance() {
         RecordListFragment fragment = new RecordListFragment();
         return fragment;
     }
-
 
     private class RecordHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
@@ -84,7 +98,6 @@ public class RecordListFragment extends Fragment {
             mClassRoomTV = (TextView) itemView.findViewById(R.id.record_item_classroom);
             mShiftTV = (TextView) itemView.findViewById(R.id.record_item_shift);
             itemView.setOnClickListener(this);
-
         }
 
         public void bindHolder(Record record) {
@@ -100,6 +113,7 @@ public class RecordListFragment extends Fragment {
             Intent intent = RecordActivity.newIntent(getActivity(), mRecord.getId());
             startActivity(intent);
         }
+
     }
 
     private class RecordAdapter extends RecyclerView.Adapter<RecordHolder> {
@@ -131,4 +145,5 @@ public class RecordListFragment extends Fragment {
             mRecords =records;
         }
     }
+
 }

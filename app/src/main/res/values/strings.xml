@@ -22,5 +22,6 @@
     <string name="street">Rua</string>
     <string name="delete_record">Deletar Ficha</string>
     <string name="archive_record">Arquivar Ficha</string>
-
+    <string name="add_record">Adicionar Ficha</string>
+    <string name="add_classroom">Adicionar Turma</string>
 </resources>
