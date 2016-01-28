@@ -18,8 +18,11 @@ import java.util.List;
 
 import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.activity.RecordActivity;
+import br.edu.sededosaber.fichasededosaber.model.BirthCertificate;
+import br.edu.sededosaber.fichasededosaber.model.Contact;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
+import br.edu.sededosaber.fichasededosaber.model.Shift;
 
 /**
  * Created by weslly on 18/01/16.
@@ -47,7 +50,15 @@ public class RecordListFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Record record = new Record();
-                record.set
+                BirthCertificate birthCertificate = new BirthCertificate();
+                Contact contact = new Contact();
+                record.setCertificate(birthCertificate);
+                record.setContacts(contact);
+                record.setShift(Shift.AFTERNOON);
+
+                LabRecord.getLabRecord(getActivity()).addRecord(record);
+                Intent intent = RecordActivity.newIntent(getActivity(),record.getId());
+                startActivity(intent);
             }
         });
 
