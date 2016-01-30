@@ -20,7 +20,7 @@ public class BirthCertificate {
     private String mNumber;
 
     public BirthCertificate() {
-       this(UUID.randomUUID());
+        this(UUID.randomUUID());
     }
 
     public BirthCertificate(UUID id) {

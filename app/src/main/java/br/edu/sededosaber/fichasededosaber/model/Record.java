@@ -10,6 +10,7 @@ public class Record {
     private UUID mId;
     private BirthCertificate mCertificate;
     private Contact mContacts;
+    private Docs mDocs;
     private String mClassRoom;
     private Shift mShift;
 
@@ -56,5 +57,13 @@ public class Record {
 
     public void setShift(Shift shift) {
         mShift = shift;
+    }
+
+    public Docs getDocs() {
+        return mDocs;
+    }
+
+    public void setDocs(Docs docs) {
+        mDocs = docs;
     }
 }

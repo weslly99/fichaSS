@@ -45,6 +45,7 @@ public class CertificateFragment extends Fragment {
         mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
 
         View view = inflater.inflate(R.layout.fragment_certificate,container,false);
+
         mNameET = (EditText) view.findViewById(R.id.record_name_edit_text);
         mNameET.setText(mRecord.getCertificate().getName());
         mNameET.addTextChangedListener(new TextWatcher() {
@@ -200,7 +201,16 @@ public class CertificateFragment extends Fragment {
         mDateButton = (Button) view.findViewById(R.id.record_bith_day_button);
         configDate();
 
+
+
         return view;
+    }
+
+    private void configDate(){
+        Date date = mRecord.getCertificate().getBirthDay();
+        if(date != null){
+            mDateButton.setText(date.toString());
+        }
     }
 
     public static CertificateFragment newInstance(Record record) {
@@ -213,10 +223,5 @@ public class CertificateFragment extends Fragment {
         return fragment;
     }
 
-    private void configDate(){
-        Date date = mRecord.getCertificate().getBirthDay();
-        if(date != null){
-            mDateButton.setText(date.toString());
-        }
-    }
+
 }

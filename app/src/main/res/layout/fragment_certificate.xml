@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"
+        android:paddingBottom="16dp"
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
@@ -23,6 +23,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/name"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -36,8 +37,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/name_father"/>
         </android.support.design.widget.TextInputLayout>
+
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
@@ -58,6 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:singleLine="true"
             android:text="@string/bith_day"/>
 
         <android.support.design.widget.TextInputLayout
@@ -83,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/state"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -115,7 +120,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-
+                    android:layout_marginBottom="16dp"
+                    android:singleLine="true"
                     android:hint="@string/book"/>
             </android.support.design.widget.TextInputLayout>
 
@@ -130,7 +136,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
-                    android:hint="@string/number"/>
+                    android:singleLine="true"
+                    android:hint="@string/number"
+                    android:layout_marginBottom="16dp"/>
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
     </LinearLayout>

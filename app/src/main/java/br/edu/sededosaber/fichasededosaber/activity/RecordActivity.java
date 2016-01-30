@@ -24,6 +24,7 @@ import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.fragment.CertificateFragment;
 import br.edu.sededosaber.fichasededosaber.fragment.ClassroomFragment;
 import br.edu.sededosaber.fichasededosaber.fragment.ContactFragment;
+import br.edu.sededosaber.fichasededosaber.fragment.DocsFragment;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
 
@@ -86,10 +87,14 @@ public class RecordActivity extends AppCompatActivity{
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         String title = getString(R.string.birth_certificate);
         viewPagerAdapter.addFragment(CertificateFragment.newInstance(mRecord), title);
+        title = getString(R.string.docs);
+        viewPagerAdapter.addFragment(DocsFragment.newInstance(mRecord),title);
         title = getString(R.string.contact);
         viewPagerAdapter.addFragment(ContactFragment.newInstance(mRecord), title);
         title = getString(R.string.classroom);
         viewPagerAdapter.addFragment(ClassroomFragment.newInstance(mRecord), title);
+
+
 
         viewpager.setAdapter(viewPagerAdapter);
     }

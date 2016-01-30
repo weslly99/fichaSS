@@ -20,6 +20,7 @@ import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.activity.RecordActivity;
 import br.edu.sededosaber.fichasededosaber.model.BirthCertificate;
 import br.edu.sededosaber.fichasededosaber.model.Contact;
+import br.edu.sededosaber.fichasededosaber.model.Docs;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
 import br.edu.sededosaber.fichasededosaber.model.Shift;
@@ -52,6 +53,8 @@ public class RecordListFragment extends Fragment {
                 Record record = new Record();
                 BirthCertificate birthCertificate = new BirthCertificate();
                 Contact contact = new Contact();
+                Docs docs = new Docs();
+                record.setDocs(docs);
                 record.setCertificate(birthCertificate);
                 record.setContacts(contact);
                 record.setShift(Shift.AFTERNOON);
