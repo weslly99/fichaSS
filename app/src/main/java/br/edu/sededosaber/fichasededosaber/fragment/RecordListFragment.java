@@ -19,6 +19,7 @@ import java.util.List;
 import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.activity.RecordActivity;
 import br.edu.sededosaber.fichasededosaber.model.BirthCertificate;
+import br.edu.sededosaber.fichasededosaber.model.Classroom;
 import br.edu.sededosaber.fichasededosaber.model.Contact;
 import br.edu.sededosaber.fichasededosaber.model.Docs;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
@@ -54,6 +55,8 @@ public class RecordListFragment extends Fragment {
                 BirthCertificate birthCertificate = new BirthCertificate();
                 Contact contact = new Contact();
                 Docs docs = new Docs();
+                Classroom classroom = new Classroom();
+                record.setClassRoom(classroom);
                 record.setDocs(docs);
                 record.setCertificate(birthCertificate);
                 record.setContacts(contact);
@@ -117,7 +120,7 @@ public class RecordListFragment extends Fragment {
         public void bindHolder(Record record) {
             mRecord = record;
             mNameTV.setText(record.getCertificate().getName());
-            mClassRoomTV.setText(record.getClassRoom());
+            mClassRoomTV.setText(record.getClassRoom().getName());
             String shift = getString(record.getShift().getText());
             mShiftTV.setText(shift);
         }

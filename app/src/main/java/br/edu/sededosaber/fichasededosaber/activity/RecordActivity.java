@@ -83,6 +83,7 @@ public class RecordActivity extends AppCompatActivity{
         mTabLayout.setTabTextColors(colorNormal, colorSelected);
     }
 
+    //config tabs
     private void setupViewPageAdapter(ViewPager viewpager) {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         String title = getString(R.string.birth_certificate);

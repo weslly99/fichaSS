@@ -11,7 +11,7 @@ public class Record {
     private BirthCertificate mCertificate;
     private Contact mContacts;
     private Docs mDocs;
-    private String mClassRoom;
+    private Classroom mClassRoom;
     private Shift mShift;
 
 
@@ -43,11 +43,11 @@ public class Record {
         mContacts = contacts;
     }
 
-    public String getClassRoom() {
+    public Classroom getClassRoom() {
         return mClassRoom;
     }
 
-    public void setClassRoom(String classRoom) {
+    public void setClassRoom(Classroom classRoom) {
         mClassRoom = classRoom;
     }
 
