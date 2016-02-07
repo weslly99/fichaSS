@@ -1,4 +1,0 @@
-
-CREATE TABLE birth_certificate(
- _id INTENGER PRIMARY KEY AUTOINCREMENT,
- );

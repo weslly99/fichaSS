@@ -11,7 +11,6 @@ public class RecordHelp extends SQLiteOpenHelper {
 
     private static final int VERSION = 1;
     private static final String DB_NAME = "record.db";
-    private SQLiteDatabase mDatabase;
 
 
     public RecordHelp(Context context) {
@@ -28,4 +27,5 @@ public class RecordHelp extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
     }
+
 }
