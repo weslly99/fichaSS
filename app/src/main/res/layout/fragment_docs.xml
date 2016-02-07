@@ -23,6 +23,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:hint="@string/cpf_father"
+                android:inputType="number"
                 android:singleLine="true"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -37,6 +38,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:hint="@string/rg_father"
+                android:inputType="number"
                 android:singleLine="true"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -50,6 +52,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:singleLine="true"
+                android:inputType="number"
                 android:hint="@string/cpf_mother"/>
         </android.support.design.widget.TextInputLayout>
         <android.support.design.widget.TextInputLayout
@@ -63,6 +66,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:singleLine="true"
+                android:inputType="number"
                 android:hint="@string/rg_mother"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>

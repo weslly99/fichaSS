@@ -62,6 +62,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:singleLine="true"
+            android:capitalize="none"
             android:text="@string/bith_day"/>
 
         <android.support.design.widget.TextInputLayout
