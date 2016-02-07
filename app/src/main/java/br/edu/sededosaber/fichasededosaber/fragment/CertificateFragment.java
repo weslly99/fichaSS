@@ -1,8 +1,10 @@
 package br.edu.sededosaber.fichasededosaber.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
@@ -24,6 +27,8 @@ import br.edu.sededosaber.fichasededosaber.model.Record;
 public class CertificateFragment extends Fragment {
 
     private static final String ARG_ID_RECORD = "id_record";
+    private static final String DATE_ID = "date";
+    private static final int DATE_CODE = 0;
 
     private EditText mNameET;
     private EditText mNameFatherET;
@@ -44,7 +49,7 @@ public class CertificateFragment extends Fragment {
         UUID id = (UUID) getArguments().getSerializable(ARG_ID_RECORD);
         mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
 
-        View view = inflater.inflate(R.layout.fragment_certificate,container,false);
+        View view = inflater.inflate(R.layout.fragment_certificate, container, false);
 
         mNameET = (EditText) view.findViewById(R.id.record_name_edit_text);
         mNameET.setText(mRecord.getCertificate().getName());
@@ -65,7 +70,7 @@ public class CertificateFragment extends Fragment {
             }
         });
 
-        mNameFatherET =(EditText) view.findViewById(R.id.record_name_father_edit_text);
+        mNameFatherET = (EditText) view.findViewById(R.id.record_name_father_edit_text);
         mNameFatherET.setText(mRecord.getCertificate().getNameFather());
         mNameFatherET.addTextChangedListener(new TextWatcher() {
             @Override
@@ -84,7 +89,7 @@ public class CertificateFragment extends Fragment {
             }
         });
 
-        mNameMotherET =(EditText) view.findViewById(R.id.record_name_mother_edit_text);
+        mNameMotherET = (EditText) view.findViewById(R.id.record_name_mother_edit_text);
         mNameMotherET.setText(mRecord.getCertificate().getNameMother());
         mNameMotherET.addTextChangedListener(new TextWatcher() {
             @Override
@@ -201,21 +206,32 @@ public class CertificateFragment extends Fragment {
         mDateButton = (Button) view.findViewById(R.id.record_bith_day_button);
         configDate();
 
+        mDateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fm = getFragmentManager();
+                DateFragment dateFragment =
+                        DateFragment.newInstance(new Date());
+                dateFragment.setTargetFragment(CertificateFragment.this, DATE_CODE);
+                dateFragment.show(fm, DATE_ID);
+
+            }
+        });
 
 
         return view;
     }
 
-    private void configDate(){
+    private void configDate() {
         Date date = mRecord.getCertificate().getBirthDay();
-        if(date != null){
+        if (date != null) {
             mDateButton.setText(date.toString());
         }
     }
 
     public static CertificateFragment newInstance(Record record) {
         Bundle bundle = new Bundle();
-        bundle.putSerializable(ARG_ID_RECORD,record.getId());
+        bundle.putSerializable(ARG_ID_RECORD, record.getId());
 
         CertificateFragment fragment = new CertificateFragment();
         fragment.setArguments(bundle);
@@ -223,5 +239,15 @@ public class CertificateFragment extends Fragment {
         return fragment;
     }
 
-
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case DATE_CODE:
+                Date date = (Date)
+                        data.getSerializableExtra(DateFragment.EXTRA_DATE);
+                mRecord.getCertificate().setBirthDay(date);
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy");
+                mDateButton.setText(dateFormat.format(date));
+        }
+    }
 }
