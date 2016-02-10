@@ -24,7 +24,6 @@ import br.edu.sededosaber.fichasededosaber.model.Contact;
 import br.edu.sededosaber.fichasededosaber.model.Docs;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
-import br.edu.sededosaber.fichasededosaber.model.Shift;
 
 /**
  * Created by weslly on 18/01/16.
@@ -56,11 +55,12 @@ public class RecordListFragment extends Fragment {
                 Contact contact = new Contact();
                 Docs docs = new Docs();
                 Classroom classroom = new Classroom();
+
                 record.setClassRoom(classroom);
                 record.setDocs(docs);
                 record.setCertificate(birthCertificate);
                 record.setContacts(contact);
-                record.setShift(Shift.AFTERNOON);
+
 
                 LabRecord.getLabRecord(getActivity()).addRecord(record);
                 Intent intent = RecordActivity.newIntent(getActivity(),record.getId());
@@ -121,8 +121,8 @@ public class RecordListFragment extends Fragment {
             mRecord = record;
             mNameTV.setText(record.getCertificate().getName());
             mClassRoomTV.setText(record.getClassRoom().getName());
-            String shift = getString(record.getShift().getText());
-            mShiftTV.setText(shift);
+           // String shift = getString(record.getClassRoom().getShift().getText());
+           // mShiftTV.setText(shift);
         }
 
         @Override

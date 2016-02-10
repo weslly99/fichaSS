@@ -22,6 +22,7 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:inputType="number"
+                android:singleLine="true"
                 android:hint="@string/phone"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -37,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/street"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -50,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/number"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -63,6 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/neighborhood"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -76,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/city"/>
         </android.support.design.widget.TextInputLayout>
 
@@ -89,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
+                android:singleLine="true"
                 android:hint="@string/state"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>

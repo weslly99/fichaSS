@@ -12,7 +12,6 @@ public class Record {
     private Contact mContacts;
     private Docs mDocs;
     private Classroom mClassRoom;
-    private Shift mShift;
 
 
     public Record() {
@@ -49,14 +48,6 @@ public class Record {
 
     public void setClassRoom(Classroom classRoom) {
         mClassRoom = classRoom;
-    }
-
-    public Shift getShift() {
-        return mShift;
-    }
-
-    public void setShift(Shift shift) {
-        mShift = shift;
     }
 
     public Docs getDocs() {

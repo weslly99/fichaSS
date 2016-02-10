@@ -49,13 +49,27 @@ public class SchemeDb {
         }
     }
 
-    public static final class ClassroomTable{
+    public static final class RecordTable {
+        public static final String NAME = "record";
+
+        public static final class Cols {
+            public static final String UUID = "uuid_record";
+            public static final String ID_DOCS = "id_docs";
+            public static final String ID_CERTIFICATE = "id_certificate";
+            public static final String ID_CONTACT = "id_contact";
+            public static final String ID_CLASSROM = "id_classroom";
+        }
+    }
+
+
+    public static final class ClassroomTable {
         public static final String NAME = "classroom";
 
-        public static final class Cols{
+        public static final class Cols {
             public static final String UUID = "uuid_classroom";
             public static final String SHIFT = "shift";
             public static final String NAME = "name_classroom";
         }
     }
+
 }
