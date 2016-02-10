@@ -1,20 +1,29 @@
 package br.edu.sededosaber.fichasededosaber.model;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import br.edu.sededosaber.fichasededosaber.bd.RecordHelp;
 
 /**
  * Created by weslly on 19/01/16.
  */
 public class LabRecord {
-    private List<Record> mRecords;
-    public static LabRecord sLabRecord;
+
+    private static LabRecord sLabRecord;
+
+    private SQLiteDatabase mDatabase;
+    private Context mContext;
+
 
     private LabRecord(Context context) {
-        mRecords = new ArrayList<>();
+        mContext = context.getApplicationContext();
+        mDatabase  = new RecordHelp(mContext)
+                .getWritableDatabase();
     }
 
     public static LabRecord getLabRecord(Context context) {
@@ -28,28 +37,25 @@ public class LabRecord {
     }
 
     public List<Record> getRecords() {
-        return mRecords;
+        return null;
     }
 
     public Record getRecord(UUID id) {
-        for (int i = 0; i < mRecords.size(); i++) {
-            if (mRecords.get(i).getId().equals(id)) {
-                return mRecords.get(i);
-            }
-        }
+
         return null;
     }
 
     public void deleteRecord(UUID id){
-        for(int i  = 0; i<mRecords.size();i++){
-            if(mRecords.get(i).getId().equals(id)){
-                mRecords.remove(i);
-                return;
-            }
-        }
+       return;
     }
     public void addRecord(Record record){
-        mRecords.add(record);
+
+
+    }
+
+    private ContentValues getContentValue(){
+
+        return null;
     }
 
 }

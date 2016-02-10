@@ -19,7 +19,7 @@ import java.util.List;
 import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.activity.RecordActivity;
 import br.edu.sededosaber.fichasededosaber.model.BirthCertificate;
-import br.edu.sededosaber.fichasededosaber.model.Classroom;
+import br.edu.sededosaber.fichasededosaber.model.ClassRoom;
 import br.edu.sededosaber.fichasededosaber.model.Contact;
 import br.edu.sededosaber.fichasededosaber.model.Docs;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
@@ -54,7 +54,7 @@ public class RecordListFragment extends Fragment {
                 BirthCertificate birthCertificate = new BirthCertificate();
                 Contact contact = new Contact();
                 Docs docs = new Docs();
-                Classroom classroom = new Classroom();
+                ClassRoom classroom = new ClassRoom();
 
                 record.setClassRoom(classroom);
                 record.setDocs(docs);

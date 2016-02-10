@@ -4,7 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import br.edu.sededosaber.fichasededosaber.bd.SchemeDb.CertificateTable;
+import br.edu.sededosaber.fichasededosaber.bd.SchemeDb.BirthCertificateTable;
 import br.edu.sededosaber.fichasededosaber.bd.SchemeDb.ClassroomTable;
 import br.edu.sededosaber.fichasededosaber.bd.SchemeDb.ContactTable;
 import br.edu.sededosaber.fichasededosaber.bd.SchemeDb.DocsTable;
@@ -26,7 +26,7 @@ public class RecordHelp extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("Create table " + ContactTable.NAME + "(" +
-                "contact_id integer primary key autoincrement, " +
+                "_id integer primary key autoincrement, " +
                 ContactTable.Cols.UUID + ", " +
                 ContactTable.Cols.PHONE + ", " +
                 ContactTable.Cols.NUMBER + ", " +
@@ -36,47 +36,47 @@ public class RecordHelp extends SQLiteOpenHelper {
                 ContactTable.Cols.STATE);
 
         db.execSQL("Create table " + DocsTable.NAME + "(" +
-                "docs_id integer primary key autoincrement, " +
+                "_id integer primary key autoincrement, " +
                 DocsTable.Cols.UUID + ", " +
                 DocsTable.Cols.CPF_FATHER + ", " +
                 DocsTable.Cols.CPF_MOTHER + ", " +
                 DocsTable.Cols.RG_FATHER + ", " +
                 DocsTable.Cols.RG_MOTHER + ", ");
 
-        db.execSQL("Create table " + CertificateTable.NAME + "(" +
-                "certificate_id integer primary key autoincrement, " +
-                CertificateTable.Cols.UUID + ", " +
-                CertificateTable.Cols.NAME + ", " +
-                CertificateTable.Cols.NAME_FATHER + ", " +
-                CertificateTable.Cols.NAME_MOTHER + ", " +
-                CertificateTable.Cols.BIRTH_DAY + ", " +
-                CertificateTable.Cols.BOOK + ", " +
-                CertificateTable.Cols.CITY + ", " +
-                CertificateTable.Cols.STATE + ", " +
-                CertificateTable.Cols.NUMBER + ", " +
-                CertificateTable.Cols.NOTARY_OFFICE);
+        db.execSQL("Create table " + BirthCertificateTable.NAME + "(" +
+                "_id integer primary key autoincrement, " +
+                BirthCertificateTable.Cols.UUID + ", " +
+                BirthCertificateTable.Cols.NAME + ", " +
+                BirthCertificateTable.Cols.NAME_FATHER + ", " +
+                BirthCertificateTable.Cols.NAME_MOTHER + ", " +
+                BirthCertificateTable.Cols.BIRTH_DAY + ", " +
+                BirthCertificateTable.Cols.BOOK + ", " +
+                BirthCertificateTable.Cols.CITY + ", " +
+                BirthCertificateTable.Cols.STATE + ", " +
+                BirthCertificateTable.Cols.NUMBER + ", " +
+                BirthCertificateTable.Cols.NOTARY_OFFICE);
 
         db.execSQL("Create table " + ClassroomTable.NAME + "(" +
-                "classroom_id integer primary key autoincrement," +
+                "_id integer primary key autoincrement," +
                 ClassroomTable.Cols.UUID + ", " +
                 ClassroomTable.Cols.NAME + ", " +
                 ClassroomTable.Cols.SHIFT + " INTEGER, ");
 
         db.execSQL("CREATE TABLE " + RecordTable.NAME + "(" +
-                "record_id integer primary key autoincrement," +
+                "_id integer primary key autoincrement," +
                 RecordTable.Cols.UUID + ", " +
                 RecordTable.Cols.ID_CERTIFICATE + ", " +
                 RecordTable.Cols.ID_CONTACT + ", " +
                 RecordTable.Cols.ID_DOCS + ", " +
                 RecordTable.Cols.ID_CLASSROM +
                 "FOREGIN KEY (" + RecordTable.Cols.ID_CERTIFICATE + ")  REFERENCES "
-                + CertificateTable.NAME + "(certificate_id)," +
+                + BirthCertificateTable.NAME + "(_id)," +
                 "FOREGIN KEY (" + RecordTable.Cols.ID_CONTACT + ") REFERENCES"
-                + ContactTable.NAME + " (contact_id)," +
+                + ContactTable.NAME + " (_id)," +
                 "FOREGIN KEY (" + RecordTable.Cols.ID_DOCS + ") REFERENCES"
-                + DocsTable.NAME + " (docs_id), " +
+                + DocsTable.NAME + " (_id), " +
                 "FOREGIN KEY (" + RecordTable.Cols.ID_CLASSROM + ") REFERENCES "
-                + ClassroomTable.NAME + " (classroom_id)");
+                + ClassroomTable.NAME + " (_id)");
     }
 
 

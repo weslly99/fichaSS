@@ -5,17 +5,17 @@ import java.util.UUID;
 /**
  * Created by weslly on 29/01/16.
  */
-public class Classroom {
+public class ClassRoom {
 
     private UUID mUUID;
     private Shift mShift;
     private String mName;
 
-    public Classroom(){
+    public ClassRoom(){
         this(UUID.randomUUID());
     }
 
-    public Classroom(UUID id){
+    public ClassRoom(UUID id){
         mUUID = id;
     }
 

@@ -11,7 +11,7 @@ public class Record {
     private BirthCertificate mCertificate;
     private Contact mContacts;
     private Docs mDocs;
-    private Classroom mClassRoom;
+    private ClassRoom mClassRoom;
 
 
     public Record() {
@@ -42,11 +42,11 @@ public class Record {
         mContacts = contacts;
     }
 
-    public Classroom getClassRoom() {
+    public ClassRoom getClassRoom() {
         return mClassRoom;
     }
 
-    public void setClassRoom(Classroom classRoom) {
+    public void setClassRoom(ClassRoom classRoom) {
         mClassRoom = classRoom;
     }
 
