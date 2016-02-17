@@ -8,7 +8,7 @@ import java.util.UUID;
 public class ClassRoom {
 
     private UUID mUUID;
-    private Shift mShift;
+    private Period mPeriod;
     private String mName;
 
     public ClassRoom(){
@@ -23,12 +23,12 @@ public class ClassRoom {
         return mUUID;
     }
 
-    public Shift getShift() {
-        return mShift;
+    public Period getPeriod() {
+        return mPeriod;
     }
 
-    public void setShift(Shift shift) {
-        mShift = shift;
+    public void setPeriod(Period period) {
+        mPeriod = period;
     }
 
     public String getName() {

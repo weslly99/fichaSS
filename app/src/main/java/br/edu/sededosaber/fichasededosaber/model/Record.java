@@ -12,6 +12,7 @@ public class Record {
     private Contact mContacts;
     private Docs mDocs;
     private ClassRoom mClassRoom;
+    private boolean mArchaived;
 
 
     public Record() {
@@ -56,5 +57,13 @@ public class Record {
 
     public void setDocs(Docs docs) {
         mDocs = docs;
+    }
+
+    public boolean isArchaived() {
+        return mArchaived;
+    }
+
+    public void setArchaived(boolean archaived) {
+        mArchaived = archaived;
     }
 }

@@ -204,7 +204,7 @@ public class CertificateFragment extends Fragment {
         });
 
         mDateButton = (Button) view.findViewById(R.id.record_bith_day_button);
-        configDate();
+        setupDate(mRecord.getCertificate().getBirthDay());
 
         mDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -214,18 +214,16 @@ public class CertificateFragment extends Fragment {
                         DateFragment.newInstance(new Date());
                 dateFragment.setTargetFragment(CertificateFragment.this, DATE_CODE);
                 dateFragment.show(fm, DATE_ID);
-
             }
         });
-
 
         return view;
     }
 
-    private void configDate() {
-        Date date = mRecord.getCertificate().getBirthDay();
+    private void setupDate(Date date) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy");
         if (date != null) {
-            mDateButton.setText(date.toString());
+            mDateButton.setText(dateFormat.format(date));
         }
     }
 
@@ -246,8 +244,8 @@ public class CertificateFragment extends Fragment {
                 Date date = (Date)
                         data.getSerializableExtra(DateFragment.EXTRA_DATE);
                 mRecord.getCertificate().setBirthDay(date);
-                SimpleDateFormat dateFormat = new SimpleDateFormat("dd 'de' MMMM 'de' yyyy");
-                mDateButton.setText(dateFormat.format(date));
+                setupDate(date);
+
         }
     }
 }

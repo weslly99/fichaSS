@@ -121,7 +121,7 @@ public class RecordListFragment extends Fragment {
             mRecord = record;
             mNameTV.setText(record.getCertificate().getName());
             mClassRoomTV.setText(record.getClassRoom().getName());
-           // String shift = getString(record.getClassRoom().getShift().getText());
+           // String shift = getString(record.getClassRoom().getPeriod().getText());
            // mShiftTV.setText(shift);
         }
 

@@ -2,12 +2,10 @@ package br.edu.sededosaber.fichasededosaber.model;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
-
-import br.edu.sededosaber.fichasededosaber.bd.RecordHelp;
 
 /**
  * Created by weslly on 19/01/16.
@@ -15,15 +13,13 @@ import br.edu.sededosaber.fichasededosaber.bd.RecordHelp;
 public class LabRecord {
 
     private static LabRecord sLabRecord;
-
-    private SQLiteDatabase mDatabase;
+    private List<Record> mRecords;
     private Context mContext;
 
 
     private LabRecord(Context context) {
         mContext = context.getApplicationContext();
-        mDatabase  = new RecordHelp(mContext)
-                .getWritableDatabase();
+       mRecords = new ArrayList<>();
     }
 
     public static LabRecord getLabRecord(Context context) {
@@ -37,10 +33,17 @@ public class LabRecord {
     }
 
     public List<Record> getRecords() {
-        return null;
+        return mRecords;
     }
 
     public Record getRecord(UUID id) {
+
+        for(int i = 0; i< mRecords.size();i++){
+            Record toReturn = mRecords.get(i);
+            if(toReturn.getId().equals(id)){
+                return toReturn;
+            }
+        }
 
         return null;
     }
@@ -48,9 +51,9 @@ public class LabRecord {
     public void deleteRecord(UUID id){
        return;
     }
+
     public void addRecord(Record record){
-
-
+        mRecords.add(record);
     }
 
     private ContentValues getContentValue(){
