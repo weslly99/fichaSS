@@ -205,7 +205,6 @@ public class CertificateFragment extends Fragment {
 
         mDateButton = (Button) view.findViewById(R.id.record_bith_day_button);
         setupDate(mRecord.getCertificate().getBirthDay());
-
         mDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

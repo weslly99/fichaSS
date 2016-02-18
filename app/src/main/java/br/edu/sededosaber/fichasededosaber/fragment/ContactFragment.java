@@ -16,6 +16,7 @@ import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.model.Contact;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
+import br.edu.sededosaber.fichasededosaber.tools.MaskTextWatcher;
 
 /**
  * Created by weslly on 23/01/16.
@@ -39,25 +40,11 @@ public class ContactFragment extends Fragment {
         mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
 
 
-        View view = inflater.inflate(R.layout.fragment_contact,container,false);
+        View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
         mPhone = (EditText) view.findViewById(R.id.contact_phone_edit_text);
-        mPhone.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getContacts().setPhone(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
+        mPhone.addTextChangedListener(new MaskTextWatcher("(##)####-####",
+                "(##)#####-####", mPhone));
 
         mNumber = (EditText) view.findViewById(R.id.contact_number_edit_text);
         mNumber.addTextChangedListener(new TextWatcher() {
@@ -86,7 +73,7 @@ public class ContactFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-            mRecord.getContacts().setStreet(s.toString());
+                mRecord.getContacts().setStreet(s.toString());
             }
 
             @Override
@@ -154,7 +141,8 @@ public class ContactFragment extends Fragment {
         return view;
     }
 
-    private void updateUI(Contact contact){
+    private void updateUI(Contact contact) {
+
         mPhone.setText(contact.getPhone());
         mNumber.setText(contact.getNumber());
         mStreet.setText(contact.getStreet());
@@ -165,13 +153,20 @@ public class ContactFragment extends Fragment {
 
     }
 
-    public static ContactFragment newInstance(Record record){
+    public static ContactFragment newInstance(Record record) {
         Bundle bundle = new Bundle();
-        bundle.putSerializable(ARG_CONTACT_ID,record.getId());
+        bundle.putSerializable(ARG_CONTACT_ID, record.getId());
 
         ContactFragment contactFragment = new ContactFragment();
         contactFragment.setArguments(bundle);
 
         return contactFragment;
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mRecord.getContacts().setPhone(MaskTextWatcher.removeMask(mPhone.getText().toString()));
+
     }
 }
