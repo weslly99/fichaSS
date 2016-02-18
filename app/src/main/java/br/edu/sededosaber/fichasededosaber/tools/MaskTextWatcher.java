@@ -70,7 +70,9 @@ public class MaskTextWatcher<E extends EditText> implements TextWatcher {
     private String maskedText(String mask, String str) {
         String masked = "";
         int i = 0;
-
+        if (mask.length() == 0) {
+            mask = mLittleMask;
+        }
         for (char c : mask.toCharArray()) {
             if (c != '#' && str.length() > mOld.length()) {
                 masked += c;
