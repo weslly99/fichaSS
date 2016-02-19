@@ -22,11 +22,12 @@ import br.edu.sededosaber.fichasededosaber.tools.MaskTextWatcher;
 public class DocsFragment extends Fragment {
 
     private static final String ARG_DOC_ID = "arg_doc_id";
-    private EditText mCpfFather;
-    private EditText mRgFather;
-    private EditText mCpfMother;
-    private EditText mRgMother;
     private Docs mDocs;
+    private EditText mCpfFatherField;
+    private EditText mRgFatherField;
+    private EditText mCpfMotherField;
+    private EditText mRgMotherField;
+
 
     @Nullable
     @Override
@@ -34,26 +35,27 @@ public class DocsFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         UUID uuid = (UUID) getArguments().get(ARG_DOC_ID);
-        mDocs = LabRecord.getLabRecord(getActivity()).getRecord(uuid).getDocs();
+        mDocs = LabRecord.getLabRecord(getActivity())
+                .getRecord(uuid).getDocs();
 
         View view = inflater.inflate(R.layout.fragment_docs, container, false);
 
 
-        mCpfFather = (EditText) view.findViewById(R.id.record_cpf_father_edit_text);
-        mCpfFather.setText(mDocs.getCpfFather());
-        mCpfFather.addTextChangedListener(
-                new MaskTextWatcher<EditText>("###.###.###-##", mCpfFather));
+        mCpfFatherField = (EditText) view.findViewById(R.id.record_cpf_father_edit_text);
+        mCpfFatherField.setText(mDocs.getCpfFather());
+        mCpfFatherField.addTextChangedListener(
+                new MaskTextWatcher<EditText>("###.###.###-##", mCpfFatherField));
 
-        mRgFather = (EditText) view.findViewById(R.id.record_rg_father_edit_text);
-        mRgFather.setText(mDocs.getRgFather());
+        mRgFatherField = (EditText) view.findViewById(R.id.record_rg_father_edit_text);
+        mRgFatherField.setText(mDocs.getRgFather());
 
-        mCpfMother = (EditText) view.findViewById(R.id.record_cpf_mother_edit_text);
-        mCpfMother.setText(mDocs.getCpfMother());
-        mCpfMother.addTextChangedListener(
-                new MaskTextWatcher<EditText>("###.###.###-##", mCpfMother));
+        mCpfMotherField = (EditText) view.findViewById(R.id.record_cpf_mother_edit_text);
+        mCpfMotherField.setText(mDocs.getCpfMother());
+        mCpfMotherField.addTextChangedListener(
+                new MaskTextWatcher<EditText>("###.###.###-##", mCpfMotherField));
 
-        mRgMother = (EditText) view.findViewById(R.id.record_rg_mother_edit_text);
-        mRgMother.setText(mDocs.getRgMother());
+        mRgMotherField = (EditText) view.findViewById(R.id.record_rg_mother_edit_text);
+        mRgMotherField.setText(mDocs.getRgMother());
 
         updateUI();
 
@@ -62,19 +64,19 @@ public class DocsFragment extends Fragment {
 
 
     private void updateUI() {
-        mCpfFather.setText(mDocs.getCpfFather());
-        mRgFather.setText(mDocs.getRgFather());
-        mCpfMother.setText(mDocs.getCpfMother());
-        mRgMother.setText(mDocs.getRgMother());
+        mCpfFatherField.setText(mDocs.getCpfFather());
+        mRgFatherField.setText(mDocs.getRgFather());
+        mCpfMotherField.setText(mDocs.getCpfMother());
+        mRgMotherField.setText(mDocs.getRgMother());
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        mDocs.setCpfFather(MaskTextWatcher.removeMask(mCpfFather.getText().toString()));
-        mDocs.setCpfMother(MaskTextWatcher.removeMask(mCpfMother.getText().toString()));
-        mDocs.setRgMother(mRgMother.getText().toString());
-        mDocs.setRgFather(mRgFather.getText().toString());
+        mDocs.setCpfFather(MaskTextWatcher.removeMask(mCpfFatherField.getText().toString()));
+        mDocs.setCpfMother(MaskTextWatcher.removeMask(mCpfMotherField.getText().toString()));
+        mDocs.setRgMother(mRgMotherField.getText().toString());
+        mDocs.setRgFather(mRgFatherField.getText().toString());
     }
 
     public static DocsFragment newInstance(Record record) {

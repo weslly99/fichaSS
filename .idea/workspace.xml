@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AndroidLogFilters">
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
@@ -34,15 +39,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CertificateFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CertificateFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/CertificateFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14720812">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
               <folding>
+                <element signature="method#updateUI#0;class#CertificateFragment#0" expanded="false" />
+                <element signature="method#onPause#0;class#CertificateFragment#0" expanded="false" />
                 <element signature="method#newInstance#0;class#CertificateFragment#0" expanded="false" />
                 <element signature="method#onActivityResult#0;class#CertificateFragment#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DocsFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/DocsFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.49238577">
+              <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RecordActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1615,10 +1642,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/DocsFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/tools/MaskTextWatcher.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/ContactFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/CertificateFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/DocsFragment.java" />
       </list>
     </option>
   </component>
@@ -1731,6 +1758,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fragment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fichaSedeDoSaber" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fichasededosaber" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2064,11 +2113,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/DocsFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/CertificateFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="26" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
-          <folding />
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="27" selection-end-line="81" selection-end-column="27" />
+          <folding>
+            <element signature="method#updateUI#0;class#CertificateFragment#0" expanded="false" />
+            <element signature="method#onPause#0;class#CertificateFragment#0" expanded="false" />
+            <element signature="method#newInstance#0;class#CertificateFragment#0" expanded="false" />
+            <element signature="method#onActivityResult#0;class#CertificateFragment#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2080,14 +2134,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/CertificateFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/activity/RecordActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14720812">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="method#newInstance#0;class#CertificateFragment#0" expanded="false" />
-            <element signature="method#onActivityResult#0;class#CertificateFragment#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/edu/sededosaber/fichasededosaber/fragment/DocsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.49238577">
+          <caret line="46" column="51" selection-start-line="46" selection-start-column="51" selection-end-line="46" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
