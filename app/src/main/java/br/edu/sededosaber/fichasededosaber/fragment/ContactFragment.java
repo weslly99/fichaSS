@@ -3,8 +3,6 @@ package br.edu.sededosaber.fichasededosaber.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,7 +22,7 @@ import br.edu.sededosaber.fichasededosaber.tools.MaskTextWatcher;
 public class ContactFragment extends Fragment {
 
     private static final String ARG_CONTACT_ID = "arg_contact_id";
-    private Record mRecord;
+    private Contact mContact;
     private EditText mPhone;
     private EditText mStreet;
     private EditText mNumber;
@@ -37,7 +35,8 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         UUID id = (UUID) getArguments().getSerializable(ARG_CONTACT_ID);
-        mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
+        mContact = LabRecord.getLabRecord(getActivity())
+                            .getRecord(id).getContacts();
 
 
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
@@ -47,109 +46,25 @@ public class ContactFragment extends Fragment {
                 "(##)#####-####", mPhone));
 
         mNumber = (EditText) view.findViewById(R.id.contact_number_edit_text);
-        mNumber.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getContacts().setNumber(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
         mStreet = (EditText) view.findViewById(R.id.contact_street_edit_text);
-        mStreet.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getContacts().setStreet(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
         mNeighborhood = (EditText) view.findViewById(R.id.contact_neighborhood_edit_text);
-        mNeighborhood.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getContacts().setNeighborhood(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
         mCity = (EditText) view.findViewById(R.id.contact_city_edit_text);
-        mCity.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getContacts().setCity(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
         mState = (EditText) view.findViewById(R.id.contact_state_edit_text);
-        mState.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getContacts().setState(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        updateUI(mRecord.getContacts());
+        updateUI();
 
         return view;
     }
 
-    private void updateUI(Contact contact) {
+    private void updateUI() {
 
-        mPhone.setText(contact.getPhone());
-        mNumber.setText(contact.getNumber());
-        mStreet.setText(contact.getStreet());
-        mNeighborhood.setText(contact.getNeighborhood());
-        mCity.setText(contact.getCity());
-        mStreet.setText(contact.getState());
-        mState.setText(contact.getState());
+        mPhone.setText(mContact.getPhone());
+        mNumber.setText(mContact.getNumber());
+        mStreet.setText(mContact.getStreet());
+        mNeighborhood.setText(mContact.getNeighborhood());
+        mCity.setText(mContact.getCity());
+        mStreet.setText(mContact.getState());
+        mState.setText(mContact.getState());
 
     }
 
@@ -166,7 +81,11 @@ public class ContactFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        mRecord.getContacts().setPhone(MaskTextWatcher.removeMask(mPhone.getText().toString()));
-
+        mContact.setPhone(MaskTextWatcher.removeMask(mPhone.getText().toString()));
+        mContact.setNumber(mNumber.getText().toString());
+        mContact.setStreet(mStreet.getText().toString());
+        mContact.setNeighborhood(mNeighborhood.getText().toString());
+        mContact.setCity(mCity.getText().toString());
+        mContact.setState(mState.getText().toString());
     }
 }
