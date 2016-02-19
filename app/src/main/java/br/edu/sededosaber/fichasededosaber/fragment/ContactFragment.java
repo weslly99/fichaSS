@@ -23,12 +23,12 @@ public class ContactFragment extends Fragment {
 
     private static final String ARG_CONTACT_ID = "arg_contact_id";
     private Contact mContact;
-    private EditText mPhone;
-    private EditText mStreet;
-    private EditText mNumber;
-    private EditText mNeighborhood;
-    private EditText mCity;
-    private EditText mState;
+    private EditText mPhoneField;
+    private EditText mStreetField;
+    private EditText mNumberField;
+    private EditText mNeighborhoodField;
+    private EditText mCityField;
+    private EditText mStateField;
 
     @Nullable
     @Override
@@ -41,15 +41,15 @@ public class ContactFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
-        mPhone = (EditText) view.findViewById(R.id.contact_phone_edit_text);
-        mPhone.addTextChangedListener(new MaskTextWatcher("(##)####-####",
-                "(##)#####-####", mPhone));
+        mPhoneField = (EditText) view.findViewById(R.id.contact_phone_edit_text);
+        mPhoneField.addTextChangedListener(new MaskTextWatcher("(##)####-####",
+                "(##)#####-####", mPhoneField));
 
-        mNumber = (EditText) view.findViewById(R.id.contact_number_edit_text);
-        mStreet = (EditText) view.findViewById(R.id.contact_street_edit_text);
-        mNeighborhood = (EditText) view.findViewById(R.id.contact_neighborhood_edit_text);
-        mCity = (EditText) view.findViewById(R.id.contact_city_edit_text);
-        mState = (EditText) view.findViewById(R.id.contact_state_edit_text);
+        mNumberField = (EditText) view.findViewById(R.id.contact_number_edit_text);
+        mStreetField = (EditText) view.findViewById(R.id.contact_street_edit_text);
+        mNeighborhoodField = (EditText) view.findViewById(R.id.contact_neighborhood_edit_text);
+        mCityField = (EditText) view.findViewById(R.id.contact_city_edit_text);
+        mStateField = (EditText) view.findViewById(R.id.contact_state_edit_text);
 
         updateUI();
 
@@ -58,13 +58,13 @@ public class ContactFragment extends Fragment {
 
     private void updateUI() {
 
-        mPhone.setText(mContact.getPhone());
-        mNumber.setText(mContact.getNumber());
-        mStreet.setText(mContact.getStreet());
-        mNeighborhood.setText(mContact.getNeighborhood());
-        mCity.setText(mContact.getCity());
-        mStreet.setText(mContact.getState());
-        mState.setText(mContact.getState());
+        mPhoneField.setText(mContact.getPhone());
+        mNumberField.setText(mContact.getNumber());
+        mStreetField.setText(mContact.getStreet());
+        mNeighborhoodField.setText(mContact.getNeighborhood());
+        mCityField.setText(mContact.getCity());
+        mStreetField.setText(mContact.getState());
+        mStateField.setText(mContact.getState());
 
     }
 
@@ -81,11 +81,11 @@ public class ContactFragment extends Fragment {
     @Override
     public void onPause() {
         super.onPause();
-        mContact.setPhone(MaskTextWatcher.removeMask(mPhone.getText().toString()));
-        mContact.setNumber(mNumber.getText().toString());
-        mContact.setStreet(mStreet.getText().toString());
-        mContact.setNeighborhood(mNeighborhood.getText().toString());
-        mContact.setCity(mCity.getText().toString());
-        mContact.setState(mState.getText().toString());
+        mContact.setPhone(MaskTextWatcher.removeMask(mPhoneField.getText().toString()));
+        mContact.setNumber(mNumberField.getText().toString());
+        mContact.setStreet(mStreetField.getText().toString());
+        mContact.setNeighborhood(mNeighborhoodField.getText().toString());
+        mContact.setCity(mCityField.getText().toString());
+        mContact.setState(mStateField.getText().toString());
     }
 }

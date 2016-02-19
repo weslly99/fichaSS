@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +16,7 @@ import java.util.Date;
 import java.util.UUID;
 
 import br.edu.sededosaber.fichasededosaber.R;
+import br.edu.sededosaber.fichasededosaber.model.BirthCertificate;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
 
@@ -30,181 +29,38 @@ public class CertificateFragment extends Fragment {
     private static final String DATE_ID = "date";
     private static final int DATE_CODE = 0;
 
-    private EditText mNameET;
-    private EditText mNameFatherET;
-    private EditText mNameMotherET;
-    private EditText mCityET;
-    private EditText mStateET;
-    private EditText mNotaryOfficeET;
-    private EditText mNumber;
-    private EditText mBook;
+    private EditText mNameField;
+    private EditText mNameFatherField;
+    private EditText mNameMotherField;
+    private EditText mCityField;
+    private EditText mStateField;
+    private EditText mNotaryOfficeField;
+    private EditText mNumberField;
+    private EditText mBookField;
     private Button mDateButton;
 
-    private Record mRecord;
+    private BirthCertificate mBirthCertificate;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         UUID id = (UUID) getArguments().getSerializable(ARG_ID_RECORD);
-        mRecord = LabRecord.getLabRecord(getActivity()).getRecord(id);
+        mBirthCertificate = LabRecord.getLabRecord(getActivity())
+                .getRecord(id).getCertificate();
 
         View view = inflater.inflate(R.layout.fragment_certificate, container, false);
 
-        mNameET = (EditText) view.findViewById(R.id.record_name_edit_text);
-        mNameET.setText(mRecord.getCertificate().getName());
-        mNameET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setName(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mNameFatherET = (EditText) view.findViewById(R.id.record_name_father_edit_text);
-        mNameFatherET.setText(mRecord.getCertificate().getNameFather());
-        mNameFatherET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setNameFather(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mNameMotherET = (EditText) view.findViewById(R.id.record_name_mother_edit_text);
-        mNameMotherET.setText(mRecord.getCertificate().getNameMother());
-        mNameMotherET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setNameMother(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mCityET = (EditText) view.findViewById(R.id.record_city_edit_text);
-        mCityET.setText(mRecord.getCertificate().getCity());
-        mCityET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setCity(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mStateET = (EditText) view.findViewById(R.id.record_state_edit_text);
-        mStateET.setText(mRecord.getCertificate().getState());
-        mStateET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setState(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mNotaryOfficeET = (EditText) view.findViewById(R.id.record_notary_office_edit_text);
-        mNotaryOfficeET.setText(mRecord.getCertificate().getNotaryOffice());
-        mNotaryOfficeET.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setNotaryOffice(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mBook = (EditText) view.findViewById(R.id.record_book_edit_text);
-        mBook.setText(mRecord.getCertificate().getBook());
-        mBook.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setBook(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
-        mNumber = (EditText) view.findViewById(R.id.record_number_edit_text);
-        mNumber.setText(mRecord.getCertificate().getNumber());
-        mNumber.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                mRecord.getCertificate().setNumber(s.toString());
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
-
+        mNameField = (EditText) view.findViewById(R.id.record_name_edit_text);
+        mNameFatherField = (EditText) view.findViewById(R.id.record_name_father_edit_text);
+        mNameMotherField = (EditText) view.findViewById(R.id.record_name_mother_edit_text);
+        mCityField = (EditText) view.findViewById(R.id.record_city_edit_text);
+        mStateField = (EditText) view.findViewById(R.id.record_state_edit_text);
+        mNotaryOfficeField = (EditText) view.findViewById(R.id.record_notary_office_edit_text);
+        mBookField = (EditText) view.findViewById(R.id.record_book_edit_text);
+        mNumberField = (EditText) view.findViewById(R.id.record_number_edit_text);
         mDateButton = (Button) view.findViewById(R.id.record_bith_day_button);
-        setupDate(mRecord.getCertificate().getBirthDay());
+
         mDateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -216,6 +72,8 @@ public class CertificateFragment extends Fragment {
             }
         });
 
+        updateUI();
+
         return view;
     }
 
@@ -224,6 +82,31 @@ public class CertificateFragment extends Fragment {
         if (date != null) {
             mDateButton.setText(dateFormat.format(date));
         }
+    }
+
+    private void updateUI() {
+        mNameField.setText(mBirthCertificate.getName());
+        mNameFatherField.setText(mBirthCertificate.getNameFather());
+        mNameMotherField.setText(mBirthCertificate.getNameMother());
+        mCityField.setText(mBirthCertificate.getCity());
+        mStateField.setText(mBirthCertificate.getState());
+        mNotaryOfficeField.setText(mBirthCertificate.getNotaryOffice());
+        mBookField.setText(mBirthCertificate.getBook());
+        mNumberField.setText(mBirthCertificate.getNumber());
+        setupDate(mBirthCertificate.getBirthDay());
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mBirthCertificate.setName(mNameField.getText().toString());
+        mBirthCertificate.setNameFather(mNameFatherField.getText().toString());
+        mBirthCertificate.setNameMother(mNameMotherField.getText().toString());
+        mBirthCertificate.setCity(mCityField.getText().toString());
+        mBirthCertificate.setState(mStateField.getText().toString());
+        mBirthCertificate.setNotaryOffice(mNotaryOfficeField.getText().toString());
+        mBirthCertificate.setBook(mBookField.getText().toString());
+        mBirthCertificate.setNumber(mNumberField.getText().toString());
     }
 
     public static CertificateFragment newInstance(Record record) {
@@ -242,7 +125,7 @@ public class CertificateFragment extends Fragment {
             case DATE_CODE:
                 Date date = (Date)
                         data.getSerializableExtra(DateFragment.EXTRA_DATE);
-                mRecord.getCertificate().setBirthDay(date);
+                mBirthCertificate.setBirthDay(date);
                 setupDate(date);
 
         }
