@@ -95,7 +95,8 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:singleLine="true"
-                android:hint="@string/state"/>
+                android:hint="@string/state"
+                android:layout_marginBottom="16dp"/>
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

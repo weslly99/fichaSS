@@ -50,11 +50,11 @@ public class RecordHelp extends SQLiteOpenHelper {
                 BirthCertificateTable.Cols.NAME_FATHER + ", " +
                 BirthCertificateTable.Cols.NAME_MOTHER + ", " +
                 BirthCertificateTable.Cols.BIRTH_DAY + ", " +
-                BirthCertificateTable.Cols.BOOK + ", " +
                 BirthCertificateTable.Cols.CITY + ", " +
                 BirthCertificateTable.Cols.STATE + ", " +
-                BirthCertificateTable.Cols.NUMBER + ", " +
-                BirthCertificateTable.Cols.NOTARY_OFFICE);
+                BirthCertificateTable.Cols.NOTARY_OFFICE + ", " +
+                BirthCertificateTable.Cols.BOOK + ", " +
+                BirthCertificateTable.Cols.NUMBER);
 
         db.execSQL("Create table " + ClassroomTable.NAME + "(" +
                 "_id integer primary key autoincrement," +

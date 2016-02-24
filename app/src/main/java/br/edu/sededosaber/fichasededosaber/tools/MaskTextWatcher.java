@@ -17,7 +17,6 @@ public class MaskTextWatcher<E extends EditText> implements TextWatcher {
     private String mLongMask = "";
     private E mText;
 
-
     public MaskTextWatcher(String mask, E text) {
         this.mLittleMask = mask.trim();
         this.mText = text;

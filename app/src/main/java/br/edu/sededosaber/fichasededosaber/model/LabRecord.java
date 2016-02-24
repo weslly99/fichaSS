@@ -49,7 +49,12 @@ public class LabRecord {
     }
 
     public void deleteRecord(UUID id){
-       return;
+        for(int i = 0; i< mRecords.size();i++){
+            if(mRecords.get(i).getId().equals(id)){
+                mRecords.remove(i);
+            }
+        }
+
     }
 
     public void addRecord(Record record){
