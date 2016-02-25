@@ -22,7 +22,7 @@ import java.util.UUID;
 
 import br.edu.sededosaber.fichasededosaber.R;
 import br.edu.sededosaber.fichasededosaber.fragment.CertificateFragment;
-import br.edu.sededosaber.fichasededosaber.fragment.ClassroomFragment;
+import br.edu.sededosaber.fichasededosaber.fragment.ClassroomTabFragment;
 import br.edu.sededosaber.fichasededosaber.fragment.ContactFragment;
 import br.edu.sededosaber.fichasededosaber.fragment.DocsFragment;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
@@ -93,10 +93,8 @@ public class RecordActivity extends AppCompatActivity{
         title = getString(R.string.contact);
         viewPagerAdapter.addFragment(ContactFragment.newInstance(mRecord), title);
         title = getString(R.string.classroom);
-        viewPagerAdapter.addFragment(ClassroomFragment.newInstance(mRecord), title);
-
-
-
+        viewPagerAdapter.addFragment(ClassroomTabFragment.newInstance(mRecord.getClassRoom()), title);
+        
         viewpager.setAdapter(viewPagerAdapter);
     }
 

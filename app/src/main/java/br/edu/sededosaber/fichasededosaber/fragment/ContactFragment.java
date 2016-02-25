@@ -39,7 +39,7 @@ public class ContactFragment extends Fragment {
                             .getRecord(id).getContacts();
 
 
-        View view = inflater.inflate(R.layout.fragment_contact, container, false);
+        View view = inflater.inflate(R.layout.fragment_contact_tab, container, false);
 
         mPhoneField = (EditText) view.findViewById(R.id.contact_phone_edit_text);
         mPhoneField.addTextChangedListener(new MaskTextWatcher("(##)####-####",

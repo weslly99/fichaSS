@@ -29,5 +29,6 @@
     <string name="add_record">Adicionar Ficha</string>
     <string name="add_classroom">Adicionar Turma</string>
     <string name="docs">Documentos</string>
+    <string name="name_class">Nome da Classe</string>
 
 </resources>

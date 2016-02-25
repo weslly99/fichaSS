@@ -19,6 +19,8 @@
         <activity android:name="br.edu.sededosaber.fichasededosaber.activity.RecordActivity"
                 android:parentActivityName=".activity.RecordListActivity"
                  />
+        <activity android:name=".activity.ClassRoomActivity"
+            android:parentActivityName=".activity.RecordListActivity"></activity>
 
     </application>
 

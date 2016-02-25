@@ -16,7 +16,7 @@ public class LabClassRoom {
     private LabClassRoom(Context context){
         mClassRooms = new ArrayList<>();
     }
-    public LabClassRoom getLabClassRoom(Context context){
+    public static LabClassRoom getLabClassRoom(Context context){
 
         if(sLabClassRoom== null){
             sLabClassRoom = new LabClassRoom(context.getApplicationContext());

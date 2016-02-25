@@ -49,7 +49,7 @@ public class CertificateFragment extends Fragment {
         mBirthCertificate = LabRecord.getLabRecord(getActivity())
                 .getRecord(id).getCertificate();
 
-        View view = inflater.inflate(R.layout.fragment_certificate, container, false);
+        View view = inflater.inflate(R.layout.fragment_certificate_tab, container, false);
 
         mNameField = (EditText) view.findViewById(R.id.record_name_edit_text);
         mNameFatherField = (EditText) view.findViewById(R.id.record_name_father_edit_text);

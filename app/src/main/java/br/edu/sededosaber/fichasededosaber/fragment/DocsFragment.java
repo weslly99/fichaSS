@@ -38,7 +38,7 @@ public class DocsFragment extends Fragment {
         mDocs = LabRecord.getLabRecord(getActivity())
                 .getRecord(uuid).getDocs();
 
-        View view = inflater.inflate(R.layout.fragment_docs, container, false);
+        View view = inflater.inflate(R.layout.fragment_docs_tab, container, false);
 
 
         mCpfFatherField = (EditText) view.findViewById(R.id.record_cpf_father_edit_text);

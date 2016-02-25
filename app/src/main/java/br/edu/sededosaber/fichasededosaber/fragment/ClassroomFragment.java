@@ -4,11 +4,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.UUID;
+
 import br.edu.sededosaber.fichasededosaber.R;
-import br.edu.sededosaber.fichasededosaber.model.Record;
 
 /**
  * Created by weslly on 23/01/16.
@@ -16,6 +19,12 @@ import br.edu.sededosaber.fichasededosaber.model.Record;
 public class ClassroomFragment extends Fragment {
    private static final String ARG_CLASSROOM_ID = "arg_classroom_id";
 
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
 
     @Nullable
     @Override
@@ -25,13 +34,21 @@ public class ClassroomFragment extends Fragment {
         return view;
     }
 
-    public static ClassroomFragment newInstance(Record record){
+
+    public static ClassroomFragment newInstance(UUID idClassRoom){
         Bundle bundle = new Bundle();
-        bundle.putSerializable(ARG_CLASSROOM_ID, record.getId());
+        bundle.putSerializable(ARG_CLASSROOM_ID, idClassRoom);
 
         ClassroomFragment fragment = new ClassroomFragment();
         fragment.setArguments(bundle);
 
         return fragment;
+    }
+
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_classroom,menu);
     }
 }

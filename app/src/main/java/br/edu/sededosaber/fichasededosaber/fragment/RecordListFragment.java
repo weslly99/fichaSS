@@ -13,15 +13,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 
 import java.util.List;
 
 import br.edu.sededosaber.fichasededosaber.R;
+import br.edu.sededosaber.fichasededosaber.activity.ClassRoomActivity;
 import br.edu.sededosaber.fichasededosaber.activity.RecordActivity;
 import br.edu.sededosaber.fichasededosaber.model.BirthCertificate;
 import br.edu.sededosaber.fichasededosaber.model.ClassRoom;
 import br.edu.sededosaber.fichasededosaber.model.Contact;
 import br.edu.sededosaber.fichasededosaber.model.Docs;
+import br.edu.sededosaber.fichasededosaber.model.LabClassRoom;
 import br.edu.sededosaber.fichasededosaber.model.LabRecord;
 import br.edu.sededosaber.fichasededosaber.model.Record;
 
@@ -32,6 +35,7 @@ public class RecordListFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
     private RecordAdapter mRecordAdapter;
+    private FloatingActionMenu mFabMenu;
     private FloatingActionButton mFabAddRecord;
     private FloatingActionButton mFabAddClassRoom;
     private Toolbar mToolbar;
@@ -46,6 +50,9 @@ public class RecordListFragment extends Fragment {
 
         mToolbar = (Toolbar) view.findViewById(R.id.record_list_toolbar);
 
+        mFabMenu = (FloatingActionMenu) view.findViewById(R.id.fab_menu_floating);
+        mFabMenu.setClosedOnTouchOutside(true);
+        
         mFabAddRecord = (FloatingActionButton)view.findViewById(R.id.fab_add_record);
         mFabAddRecord.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,11 +72,26 @@ public class RecordListFragment extends Fragment {
                 LabRecord.getLabRecord(getActivity()).addRecord(record);
                 Intent intent = RecordActivity.newIntent(getActivity(),record.getId());
                 startActivity(intent);
+                if(mFabMenu.isOpened()){
+                   mFabMenu.close(false);
+                }
             }
         });
 
         mFabAddClassRoom =(FloatingActionButton) view.findViewById(R.id.fab_add_classroom);
+        mFabAddClassRoom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                ClassRoom classRoom = new ClassRoom();
+                LabClassRoom.getLabClassRoom(getActivity()).add(classRoom);
+                Intent intent = ClassRoomActivity.newIntent(getActivity(),classRoom.getUUID());
+                startActivity(intent);
+                if(mFabMenu.isOpened()){
+                    mFabMenu.close(false);
+                }
+            }
+        });
 
 
         updateUI();
